@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import  data from './componets/data'
+import { useState } from 'react';
+import Product from './componets/Product'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+function App( ) {
+
+  const [tours, setTours] = useState(data);
+
+  return(
+      <div>
+      <Product tours={tours}></Product>
+      
+      </div>
   );
+
+
+   
 }
 
 export default App;
